@@ -1,0 +1,26 @@
+{
+  "path": "",
+  "headline": "Heavy Equipment wear parts",
+  "subHead": "Blades, Teeth, Spare Parts, Tracks, and Major Components for Heavy Equipment",
+  "equipment": {
+    "brands": [
+      "Bobcat", "Barber - Greene", "Blaw Knox", "Broce", "Case", "Caterpillar", "John Deere", "Komatsu", "Volvo",  "Doosan","Fiat",
+      "Ford-New Holland", "Gallion", "Gehl","Hitachi", "Hyundia", "JCB", "Kubota", "Liebherr", "Linkbelt", "Massey Ferguson",
+      "Takeuchi", "Terex", "Yanmar"
+    ]
+  },
+  "parts": {
+    "brands": [
+      "Black Cat Blades", "Bucyrus Blades", "ESCO", "Kennametal", "Pengo"
+    ],
+    "equivalentTo": [
+      "Adco", "Clark-Hancock", "Fabco", "Fanggs", "Geith", "H&L", "Hendrix", "Hensley"
+    ],
+    "categories": [
+      "blades", "bristles", "bullet teeth", "bucket teeth", "buckets", "chains", "cutting edges", "cylinders", "differentials",
+      "edges", "end bits", "engines", "floors", "grader brass", "hubs", "idlers/rollers", "milling bits", "o/h kits",  "pins and bushings",
+      "rippers", "rubber tracks", "scarifiers", "sprockets", "teeth", "torques", "transmissions", "undercarriage", "wheels"
+    ]
+  },
+  "services": "undercarriage replacement"
+}
