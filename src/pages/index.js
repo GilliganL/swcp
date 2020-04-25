@@ -9,14 +9,10 @@ const IndexPage = (props) => {
   console.log(props)
   return (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <SEO title="Southwest Constructon Parts" />
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <img src="/assets/gear.svg" />
+      <img src="/assets/gearPhone.svg" />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )}
 

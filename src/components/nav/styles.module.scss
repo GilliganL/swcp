@@ -1,0 +1,46 @@
+@import '../../main_style.scss';
+
+.nav {
+  
+  .burger-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    .bar {
+      width: 21px;
+      height: 2px;
+      margin: 5px 0;
+      padding: 0;
+      background: $white;
+      transition: transform 800ms, opacity 400ms;
+
+      &:first-child {
+        transform-origin: 0 0;
+        }
+        &:nth-child(2) {
+          background: $orange;
+        }
+        &:last-child {
+          transform-origin: 0 100%;
+        }
+    }
+  }
+
+  &-active {
+    .burger-button {
+      .bar {
+        &:first-child {
+        transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

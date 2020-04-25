@@ -1,0 +1,27 @@
+@import '../../main_style.scss';
+
+.header {
+  background: $dark;
+  color: $color;
+  height: 75px;
+
+
+  &-content {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-family: $title2Font;
+      font-family: $titleFont;
+      font-weight: 400;
+      font-size: 28px;
+      margin: 0;
+    }
+  }
+}
