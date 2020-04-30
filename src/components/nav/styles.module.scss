@@ -1,6 +1,17 @@
 @import '../../main_style.scss';
 
 .nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  &-phone {
+    color: $white;
+    height: 100%;
+    margin-right: 7px;
+    line-height: 20px;
+    padding: 20px 7px;
+  }
   
   .burger-button {
     background: transparent;

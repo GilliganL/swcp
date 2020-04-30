@@ -7,13 +7,14 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import Img from 'gatsby-image';
 import Footer from './footer';
 import Header from './header';
 import PhoneCTA from './phone-cta';
 import { useStaticQuery, graphql } from "gatsby"
 import "./layout.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, image, imageBackgroundColor, imageTitle }) => {
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,7 +28,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={site.siteMetadata.title} />
-      <main>{children}</main>
+      <main>
+        <Img
+          backgroundColor={imageBackgroundColor || true}
+          fluid={image}
+          title={imageTitle}
+        />
+        {children}
+      </main>
       <PhoneCTA />
       <Footer />
     </>

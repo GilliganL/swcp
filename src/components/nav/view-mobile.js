@@ -4,6 +4,9 @@ import styles from './styles.module.scss';
 
 const MobileNavView = ({ open, setOpen }) => (
   <nav className={`${styles.nav} ${open ? styles.navActive : ''}`}>
+    <a className={styles.navPhone} href="tel:505-220-4076">
+      (505) 220-4076
+    </a>
     <button
       className={styles.burgerButton}
       onClick={() => setOpen(!open)}
