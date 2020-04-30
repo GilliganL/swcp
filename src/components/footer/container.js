@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
-import PropTypes from  'prop-types';
+import React from 'react';
 import FooterView from './view';
 
-const FooterContainer = () => {
-
-  return (
-    <>
-      {(sm) && <MobileNavView open={open} setOpen={setOpen} /> }
-      {(!sm && l) && <NavView /> }
-    </>
-  );
-};
+const FooterContainer = () => (
+  <FooterView />
+);
 
 export default FooterContainer;

@@ -7,11 +7,11 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Footer from '../components/footer';
+import Footer from './footer';
+import Header from './header';
+import PhoneCTA from './phone-cta';
 import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+import "./layout.scss"
 
 const Layout = ({ children }) => {
   const { site } = useStaticQuery(graphql`
@@ -27,16 +27,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={site.siteMetadata.title} />
-      <div
-        style={{
-          margin: '0 auto',
-          padding: '0 1.0875rem 1.45rem',
-          width: '100%',
-        }}
-      >
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <main>{children}</main>
+      <PhoneCTA />
+      <Footer />
     </>
   )
 }
