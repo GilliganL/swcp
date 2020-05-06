@@ -5,12 +5,12 @@ import NavView from './view';
 import MobileNavView from './view-mobile';
 
 const NavContainer = () => {
-  const { sm, l } = useBreakpoint();
+  const { xs, sm, l } = useBreakpoint();
   const [open, setOpen] = useState(false);
-
+  console.log(xs, sm, l)
   return (
     <>
-      {(sm) && <MobileNavView open={open} setOpen={setOpen} /> }
+      {(sm) && <MobileNavView open={open} setOpen={setOpen} xs={xs} /> }
       {(!sm && l) && <NavView /> }
     </>
   );

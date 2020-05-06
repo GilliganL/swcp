@@ -24,8 +24,15 @@
       font-family: $title2Font;
       font-family: $titleFont;
       font-weight: 400;
-      font-size: 28px;
+      font-size: 22px;
+      width: 200px;
       margin: 0;
+      z-index: 10;
+
+      @media only screen and (min-width: $tablet) {
+        font-size: 28px;
+        width: 400px;
+      }
     }
   }
 }
