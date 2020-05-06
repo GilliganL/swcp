@@ -14,7 +14,7 @@ const IndexPage = ({ data, ...props}) => {
       media: `(min-width: 768px)`,
     },
   ];
-  const { parts } = data.homeJson
+  const { parts, brands, services } = data.homeJson
 
   return(
     <Layout
@@ -25,7 +25,19 @@ const IndexPage = ({ data, ...props}) => {
       <Panel
         title={parts.title}
         content={parts.content}
+        cta={parts.cta}
         list={parts.list}
+      />
+      <Panel
+        title={brands.title}
+        list={brands.list}
+        theme="Blue"
+      />
+      <Panel
+        image={data.servicesImage.childImageSharp.fluid}
+        list={services.list}
+        theme="Image"
+        title={services.title}
       />
     </Layout>
   );
@@ -56,11 +68,30 @@ export const query = graphql`
         }
       }
     }
+    servicesImage: file(relativePath: { eq: "gaspar-manuel-zaldo-WH5Z6agFYbI-unsplash.jpg" }) {
+      childImageSharp {
+        fluid(
+          maxWidth: 400
+          quality: 80
+        ) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     homeJson {
       path
       parts {
         title
         content
+        cta
+        list
+      }
+      brands {
+        title
+        list
+      }
+      services {
+        title
         list
       }
     }

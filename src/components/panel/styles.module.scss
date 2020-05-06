@@ -4,9 +4,12 @@
   font-family: $textFont;
   max-width: 1440px;
   padding: 28px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media only screen and (min-width: $tablet) {
-    padding: 28px 28px;
+    padding: 42px 28px;
   }
 
   &-title {
@@ -15,19 +18,70 @@
   }
 
   &-content {
+    max-width: 570px;
     font-weight: 300;
+    text-align: center;
+    margin-bottom: 7px;
+  }
+
+  &-cta {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 42px;
   }
 
   &-list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 260px;
+    width: 100%;
     font-weight: 400;
     margin: 0;
 
+    @media only screen and (min-width: $tablet) {
+      max-height: 200px;
+    }
+
+    &__sm {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
     &-item {
       margin-bottom: 7px;
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: 400;
+      text-align: center;
     }
+  }
+}
+
+
+.panel-blue {
+  background: $dark;
+  color: $white;
+
+  // .panel-title {
+  //   font-weight: 300;
+  // }
+
+  .panel-list-item {
+    font-weight: 700;
+  }
+}
+
+.panel-image {
+  height: 284px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .panel-title {
+    width: 40%;
+  }
+  
+  .panel-list {
+    width: 40%;
+    justify-content: flex-start;
   }
 }

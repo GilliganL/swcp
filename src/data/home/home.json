@@ -12,7 +12,8 @@
   },
   "parts": {
     "title": "Parts You Can Depend On",
-    "content": "For over 20 years Southwest Construction Parts has supplied the greater Southwest with high quality heavy equipment wear parts. We work with dependable suppliers and carry a wide range of components. Give us a call for a quote.",
+    "content": "For over 20 years Southwest Construction Parts has supplied the greater Southwest with high quality heavy equipment wear parts. We work with dependable suppliers and carry a wide range of components.",
+    "cta": "Give use a call for a quote.",
     "list": [
       "blades", "bristles", "bullet teeth", "bucket teeth", "buckets", "chains", "cutting edges", "cylinders", "differentials",
       "edges", "end bits", "engines", "floors", "grader brass", "hubs", "idlers/rollers", "milling bits", "o/h kits",  "pins and bushings",
@@ -20,7 +21,7 @@
     ]
   },
   "brands": {
-    "title": "Brands you trust",
+    "title": "Brands You Know and Trust",
     "list": [
       "Black Cat Blades", "Bucyrus Blades", "ESCO", "Kennametal", "Pengo"
     ],
