@@ -1,0 +1,33 @@
+@import '../../main_style.scss';
+
+.panel {
+  font-family: $textFont;
+  max-width: 1440px;
+  padding: 28px 14px;
+
+  @media only screen and (min-width: $tablet) {
+    padding: 28px 28px;
+  }
+
+  &-title {
+    font-family: $titleFont;
+    font-weight: 400;
+  }
+
+  &-content {
+    font-weight: 300;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 260px;
+    font-weight: 400;
+    margin: 0;
+
+    &-item {
+      margin-bottom: 7px;
+    }
+  }
+}

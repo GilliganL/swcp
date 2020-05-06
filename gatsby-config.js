@@ -1,5 +1,5 @@
 const customBreakpointQueries = {
-  xs: '(max-width: 350px)',
+  xs: '(max-width: 450px)',
   sm: '(max-width: 768px)',
   md: '(max-width: 1024px)',
   l: '(max-width: 1280px)',
@@ -59,7 +59,7 @@ module.exports = {
           },
           {
             family: `Roboto`,
-            variants: [`400`, `700`]
+            variants: [`300`, `400`, `700`]
           },
           {
             family: `Roboto Slab`,

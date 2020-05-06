@@ -2,25 +2,34 @@
   "path": "",
   "headline": "Heavy Equipment wear parts",
   "subHead": "Blades, Teeth, Spare Parts, Tracks, and Major Components for Heavy Equipment",
-  "equipment": {
-    "brands": [
+  "equipmentServed": {
+    "title": "",
+    "list": [
       "Bobcat", "Barber - Greene", "Blaw Knox", "Broce", "Case", "Caterpillar", "John Deere", "Komatsu", "Volvo",  "Doosan","Fiat",
       "Ford-New Holland", "Gallion", "Gehl","Hitachi", "Hyundia", "JCB", "Kubota", "Liebherr", "Linkbelt", "Massey Ferguson",
       "Takeuchi", "Terex", "Yanmar"
     ]
   },
   "parts": {
-    "brands": [
-      "Black Cat Blades", "Bucyrus Blades", "ESCO", "Kennametal", "Pengo"
-    ],
-    "equivalentTo": [
-      "Adco", "Clark-Hancock", "Fabco", "Fanggs", "Geith", "H&L", "Hendrix", "Hensley"
-    ],
-    "categories": [
+    "title": "Parts You Can Depend On",
+    "content": "For over 20 years Southwest Construction Parts has supplied the greater Southwest with high quality heavy equipment wear parts. We work with dependable suppliers and carry a wide range of components. Give us a call for a quote.",
+    "list": [
       "blades", "bristles", "bullet teeth", "bucket teeth", "buckets", "chains", "cutting edges", "cylinders", "differentials",
       "edges", "end bits", "engines", "floors", "grader brass", "hubs", "idlers/rollers", "milling bits", "o/h kits",  "pins and bushings",
       "rippers", "rubber tracks", "scarifiers", "sprockets", "teeth", "torques", "transmissions", "undercarriage", "wheels"
     ]
   },
-  "services": "undercarriage replacement"
+  "brands": {
+    "title": "Brands you trust",
+    "list": [
+      "Black Cat Blades", "Bucyrus Blades", "ESCO", "Kennametal", "Pengo"
+    ],
+    "compareTo": [
+      "Adco", "Clark-Hancock", "Fabco", "Fanggs", "Geith", "H&L", "Hendrix", "Hensley"
+    ]
+  }, 
+  "services": {
+    "title": "On Site Services",
+    "list": ["undercarriage replacement"]
+  }
 }

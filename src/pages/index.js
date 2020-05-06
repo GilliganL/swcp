@@ -1,16 +1,12 @@
-import React from "react"
+import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-
-
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Panel from '../components/panel';
 
 const IndexPage = ({ data, ...props}) => {
-  console.log(data)
   console.log(props)
-
+  console.log(data)
   const sources = [
     data.mobileImage.childImageSharp.fluid,
     {
@@ -18,6 +14,7 @@ const IndexPage = ({ data, ...props}) => {
       media: `(min-width: 768px)`,
     },
   ];
+  const { parts } = data.homeJson
 
   return(
     <Layout
@@ -25,6 +22,11 @@ const IndexPage = ({ data, ...props}) => {
       imageTitle="Southwest Construction Parts Sign"
     >
       <SEO title="Southwest Constructon Parts" />
+      <Panel
+        title={parts.title}
+        content={parts.content}
+        list={parts.list}
+      />
     </Layout>
   );
 };
@@ -52,6 +54,14 @@ export const query = graphql`
         ) {
           ...GatsbyImageSharpFluid
         }
+      }
+    }
+    homeJson {
+      path
+      parts {
+        title
+        content
+        list
       }
     }
   }
