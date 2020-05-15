@@ -1,0 +1,12 @@
+@import '../../main_style.scss';
+
+.paragraph {
+  max-width: 570px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 28px;
+
+  @media only screen and (min-width: $tablet) {
+    margin-bottom: 42px;
+  }
+}

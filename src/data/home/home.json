@@ -1,23 +1,21 @@
 {
   "path": "",
-  "headline": "Heavy Equipment wear parts",
+  "headline": "Heavy Equipment Wear Parts",
   "subHead": "Blades, Teeth, Spare Parts, Tracks, and Major Components for Heavy Equipment",
-  "equipmentServed": {
-    "title": "",
-    "list": [
-      "Bobcat", "Barber - Greene", "Blaw Knox", "Broce", "Case", "Caterpillar", "John Deere", "Komatsu", "Volvo",  "Doosan","Fiat",
-      "Ford-New Holland", "Gallion", "Gehl","Hitachi", "Hyundia", "JCB", "Kubota", "Liebherr", "Linkbelt", "Massey Ferguson",
-      "Takeuchi", "Terex", "Yanmar"
-    ]
+  "equipment": {
+    "title": "Get Parts for Your Equipment",
+    "subTitle": "We have replacement parts for these brands and more:",
+    "content": "We stock parts to fit equipment from Cat scrapers to Bobcat skidsteers, pavers to trenchers and loaders to excavators.",
+    "contentList": "Bobcat, Barber - Greene, Blaw Knox, Broce, Case, Caterpillar, John Deere, Komatsu, Volvo, Doosan, Fiat, Ford-New Holland, Gallion, Gehl, Hitachi, Hyundia, JCB, Kubota, Liebherr, Linkbelt, Massey Ferguson, Takeuchi, Terex, Yanmar"
   },
   "parts": {
-    "title": "Parts You Can Depend On",
+    "title": "Heavy Equipment Wear Parts You Can Depend On",
     "content": "For over 20 years Southwest Construction Parts has supplied the greater Southwest with high quality heavy equipment wear parts. We work with dependable suppliers and carry a wide range of components.",
     "cta": "Give use a call for a quote.",
     "list": [
       "blades", "bristles", "bullet teeth", "bucket teeth", "buckets", "chains", "cutting edges", "cylinders", "differentials",
       "edges", "end bits", "engines", "floors", "grader brass", "hubs", "idlers/rollers", "milling bits", "o/h kits",  "pins and bushings",
-      "rippers", "rubber tracks", "scarifiers", "sprockets", "teeth", "torques", "transmissions", "undercarriage", "wheels"
+      "rippers", "rubber tracks", "scarifiers", "sprockets", "teeth", "torques", "transmissions", "undercarriages", "wheels"
     ]
   },
   "brands": {

@@ -4,32 +4,23 @@ import useBreakpoints from '../../hooks/use-breakpoints';
 import PanelView from './view';
 
 const PanelContainer = ({
-  children, contentList, theme,
+  children, image,
 }) => {
   const [breakpoint] = useBreakpoints();
 
   return (
     <PanelView
       breakpoint={breakpoint}
-      contentList={contentList}
-      theme={theme}
+      image={image}
     >
       {children}
     </PanelView>
   )
 };
 PanelContainer.propTypes = {
-  content: PropTypes.string,
-  contentList: PropTypes.string,
-  list: PropTypes.array,
-  title: PropTypes.string.isRequired,
-  theme: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  image: PropTypes.object.isRequired,
 };
-PanelContainer.defaultProps = {
-  content: null,
-  contentList: null,
-  list: null,
-  theme:null,
-};
+PanelContainer.defaultProps = {};
 
 export default PanelContainer;

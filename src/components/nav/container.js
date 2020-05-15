@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from  'prop-types';
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import useBreakpoints from '../../hooks/use-breakpoints';
 import NavView from './view';
 import MobileNavView from './view-mobile';
 
 const NavContainer = () => {
-  const { xs, sm, l } = useBreakpoint();
+  const [breakpoint] = useBreakpoints();
   const [open, setOpen] = useState(false);
-
+console.log(breakpoint)
   return (
     <>
-      {(sm) && <MobileNavView open={open} setOpen={setOpen} xs={xs} /> }
-      {(!sm && l) && <NavView /> }
+      {breakpoint !== 'desktop' && <MobileNavView open={open} setOpen={setOpen} breakpoint={breakpoint} /> }
+      {breakpoint === 'desktop' && <NavView /> }
     </>
   );
 };

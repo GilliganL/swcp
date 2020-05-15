@@ -1,0 +1,37 @@
+@import '../../main_style.scss';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  font-weight: 400;
+  margin: 0;
+
+  @media only screen and (min-width: $tablet) {
+    max-height: 200px;
+  }
+
+  &__sm {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &-item {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    text-align: left;
+
+    @media only screen and (min-width: $tablet) {
+      text-align: center;
+    }
+
+    &__sm {
+      font-weight: 400;
+      font-size: 22px;
+      margin: 7px;
+    }
+  }
+}

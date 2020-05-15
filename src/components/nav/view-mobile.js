@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-const MobileNavView = ({ open, setOpen, xs }) => (
+const MobileNavView = ({ open, setOpen, breakpoint }) => (
   <nav className={`${styles.nav} ${open ? styles.navActive : ''}`}>
-    {!xs && (
+    {breakpoint !== 'mobile' && (
       <a className={styles.navPhone} href="tel:505-220-4076">
         (505) 220-4076
       </a>

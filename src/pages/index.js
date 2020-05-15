@@ -3,6 +3,11 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Panel from '../components/panel';
+import H2 from '../components/heading2';
+import H3 from '../components/heading3';
+import P from '../components/paragraph';
+import List from '../components/list';
+import PanelImage from '../components/panel-image';
 
 const IndexPage = ({ data, ...props}) => {
   console.log(props)
@@ -14,7 +19,7 @@ const IndexPage = ({ data, ...props}) => {
       media: `(min-width: 768px)`,
     },
   ];
-  const { parts, brands, services } = data.homeJson
+  const { parts, brands, services, equipment } = data.homeJson
 
   return(
     <Layout
@@ -22,23 +27,27 @@ const IndexPage = ({ data, ...props}) => {
       imageTitle="Southwest Construction Parts Sign"
     >
       <SEO title="Southwest Constructon Parts" />
-      <Panel
-        title={parts.title}
-        content={parts.content}
-        cta={parts.cta}
-        list={parts.list}
-      />
-      <Panel
-        title={brands.title}
-        list={brands.list}
-        theme="Blue"
-      />
-      <Panel
+      <Panel>
+        <H2 title={parts.title} />
+        <P content={parts.content} />
+        <List list={parts.list} />
+      </Panel>
+      <Panel theme="Blue">
+        <H2 title={brands.title} />
+        <List list={brands.list} />
+      </Panel>
+      <Panel column>
+        <H2 title={equipment.title} />
+        <P content={equipment.content} style={{ textAlign: 'left' }} />
+        <H3 subTitle={equipment.subTitle} />
+        <P content={equipment.contentList} style={{ textAlign: 'left' }} />
+      </Panel>
+      <PanelImage
         image={data.servicesImage.childImageSharp.fluid}
-        list={services.list}
-        theme="Image"
-        title={services.title}
-      />
+      >
+        <H2 title={services.title} />
+        <List list={services.list} />
+      </PanelImage>
     </Layout>
   );
 };
@@ -93,6 +102,12 @@ export const query = graphql`
       services {
         title
         list
+      }
+      equipment {
+        title
+        subTitle
+        content
+        contentList
       }
     }
   }

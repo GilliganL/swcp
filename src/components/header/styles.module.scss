@@ -3,29 +3,28 @@
 .header {
   background: $dark;
   color: $white;
-  height: 60px;
-
-  @media only screen and (min-width: $desktop) {
-    height: 75px;
-  }
-
+  height: 75px;
 
   &-content {
     height: 100%;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 14px;
+    padding-right: 7px;
+    padding-left: 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    @media only screen and (min-width: $tablet) {
+      padding: 0 14px;
+    }
+
     .logo {
       font-family: $title2Font;
-      font-family: $titleFont;
-      font-weight: 400;
-      font-size: 22px;
-      width: 200px;
+      font-weight: 700;
+      font-size: 26px;
+      width: 260px;
       margin: 0;
       z-index: 10;
 
