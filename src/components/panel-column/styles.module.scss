@@ -1,0 +1,9 @@
+@import '../../main_style.scss';
+
+.column {
+  width: 100%;
+  
+  @media only screen and (min-width: $tablet) {
+    width: 50%;
+  }
+}

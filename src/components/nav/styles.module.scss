@@ -9,8 +9,11 @@
     color: $white;
     height: 100%;
     margin-right: 7px;
-    line-height: 20px;
-    padding: 20px 7px;
+    line-height: 22px;
+    font-size: 20px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
   }
   
   .burger-button {

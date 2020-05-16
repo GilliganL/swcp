@@ -10,29 +10,29 @@ const PanelView = ({
   breakpoint, children, image,
 }) => (
   <section className={styles.panelImage}>
-    {breakpoint === 'mobile' && (
+    {breakpoint !== 'desktop' && (
       <Img
         backgroundColor
         fluid={image}
         style={{
-          height: '200px',
+          height: breakpoint === 'mobile' ? '200px' : '400px',
           width: '100%',
         }}
       />
     )}
     <div className={styles.panelImage__contentWrapper}>
       {children}
-      {breakpoint !== 'mobile' && (
-        <Img
-          backgroundColor
-          fluid={image}
-          style={{
-            height: '200px',
-            width: '100%',
-          }}
-        />
-      )}
     </div>
+    {breakpoint === 'desktop' && (
+      <Img
+        backgroundColor
+        fluid={image}
+        style={{
+          height: '100%',
+          width: '50%',
+        }}
+      />
+    )}
   </section>
 );
 PanelView.propTypes = {

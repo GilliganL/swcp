@@ -7,6 +7,7 @@ import H2 from '../components/heading2';
 import H3 from '../components/heading3';
 import P from '../components/paragraph';
 import List from '../components/list';
+import Column from '../components/panel-column';
 import PanelImage from '../components/panel-image';
 
 const IndexPage = ({ data, ...props}) => {
@@ -36,11 +37,15 @@ const IndexPage = ({ data, ...props}) => {
         <H2 title={brands.title} />
         <List list={brands.list} />
       </Panel>
-      <Panel column>
-        <H2 title={equipment.title} />
-        <P content={equipment.content} style={{ textAlign: 'left' }} />
-        <H3 subTitle={equipment.subTitle} />
-        <P content={equipment.contentList} style={{ textAlign: 'left' }} />
+      <Panel columns>
+        <Column>
+          <H2 title={equipment.title} />
+          <P content={equipment.content} style={{ textAlign: 'left' }} />
+          </Column>
+        <Column>
+          <H3 subTitle={equipment.subTitle} />
+          <P content={equipment.contentList} style={{ textAlign: 'left' }} />
+        </Column>
       </Panel>
       <PanelImage
         image={data.servicesImage.childImageSharp.fluid}

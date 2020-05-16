@@ -4,14 +4,14 @@ import useBreakpoints from '../../hooks/use-breakpoints';
 import PanelView from './view';
 
 const PanelContainer = ({
-  children, contentList, theme,
+  children, columns, theme,
 }) => {
   const [breakpoint] = useBreakpoints();
 
   return (
     <PanelView
       breakpoint={breakpoint}
-      contentList={contentList}
+      columns={columns}
       theme={theme}
     >
       {children}
@@ -19,17 +19,12 @@ const PanelContainer = ({
   )
 };
 PanelContainer.propTypes = {
-  content: PropTypes.string,
-  contentList: PropTypes.string,
-  list: PropTypes.array,
-  title: PropTypes.string.isRequired,
+  columns: PropTypes.bool,
   theme: PropTypes.string,
 };
 PanelContainer.defaultProps = {
-  content: null,
-  contentList: null,
-  list: null,
-  theme:null,
+  columns: null,
+  theme: null,
 };
 
 export default PanelContainer;

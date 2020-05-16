@@ -1,6 +1,7 @@
 @import '../../main_style.scss';
 
 .panel-image {
+  box-sizing: border-box;
   font-family: $textFont;
   max-width: 1440px;
   display: flex;
@@ -8,15 +9,28 @@
   align-items: center;
   justify-content: center;
   
-  @media only screen and (min-width: $tablet) {
+  @media only screen and (min-width: $desktop) {
     height: 284px;
     flex-wrap: wrap;
-    padding: 42px 28px;
+    padding: 0;
+    // background: $dark;
+    // color: $white;
   }
 
   &__content-wrapper {
     width: 100%;
     padding: 28px 14px;
     text-align: center;
+
+    @media only screen and (min-width: $tablet) {
+      box-sizing: border-box;
+      width: 50%;
+      height: 100%;
+      padding: 42px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

@@ -6,22 +6,25 @@ import styles from './styles.module.scss';
 // themes: Blue
 
 const PanelView = ({
-  breakpoint, children, contentList, theme,
+  breakpoint, children, columns, theme,
 }) => ( 
-  <section className={`${styles.panel} ${theme ? styles[`panel${theme}`] : ''}`}>
+  <section 
+    className={`
+      ${styles.panel}
+      ${theme ? styles[`panel${theme}`] : ''}
+      ${columns ? styles.panelColumns : ''}
+      `}
+    >
     {children}
-    {contentList && (
-      <p className={styles.panelContentList}>
-        {contentList}
-      </p>
-    )}
   </section>
 );
 PanelView.propTypes = {
+  columns: PropTypes.bool,
   contentList: PropTypes.string,
   theme: PropTypes.string,
 };
 PanelView.defaultProps = {
+  columns: null,
   contentList: null,
   theme: null,
 };

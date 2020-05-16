@@ -16,4 +16,13 @@
     background: $dark;
     color: $white;
   }
+
+  &-columns {
+    
+    @media only screen and (min-width: $tablet) {
+      flex-wrap: wrap;
+      max-height: 450px;
+      padding-bottom: 0;
+    }
+  }
 }
