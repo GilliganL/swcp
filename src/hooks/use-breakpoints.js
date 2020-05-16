@@ -8,7 +8,7 @@ const useBreakpoints = () => {
   useEffect(() => {
     if (sm) setBreakpoint('mobile');
     else if (md) setBreakpoint('tablet');
-    else if (l) setBreakpoint('desktop');
+    else setBreakpoint('desktop');
   }, [sm, md, l]);
 
   return [breakpoint];

@@ -12,6 +12,10 @@
     max-height: 200px;
   }
 
+  @media only screen and (min-width: $desktop) {
+    max-width: 1280px;
+  }
+
   &__sm {
     flex-direction: row;
     justify-content: space-around;

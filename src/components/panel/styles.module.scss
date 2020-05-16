@@ -3,6 +3,7 @@
 .panel {
   font-family: $textFont;
   max-width: 1440px;
+  margin: 0 auto;
   padding: 28px 14px;
   display: flex;
   flex-direction: column;
@@ -11,6 +12,10 @@
   @media only screen and (min-width: $tablet) {
     padding: 42px 28px;
   }
+
+  // @media only screen and (min-width: $desktop) {
+  //   padding: 56px 42px;
+  // }
 
   &-blue {
     background: $dark;
@@ -23,6 +28,13 @@
       flex-wrap: wrap;
       max-height: 450px;
       padding-bottom: 0;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-around;
+      max-height: 450px;
+      padding-bottom: 42px;
     }
   }
 }

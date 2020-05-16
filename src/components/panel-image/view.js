@@ -29,7 +29,7 @@ const PanelView = ({
         fluid={image}
         style={{
           height: '100%',
-          width: '50%',
+          width: '100%',
         }}
       />
     )}

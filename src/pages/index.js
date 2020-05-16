@@ -9,10 +9,12 @@ import P from '../components/paragraph';
 import List from '../components/list';
 import Column from '../components/panel-column';
 import PanelImage from '../components/panel-image';
+import useBreakpoints from '../hooks/use-breakpoints';
 
 const IndexPage = ({ data, ...props}) => {
-  console.log(props)
-  console.log(data)
+  const [breakpoint] = useBreakpoints();
+  console.log(breakpoint)
+  
   const sources = [
     data.mobileImage.childImageSharp.fluid,
     {
@@ -22,37 +24,37 @@ const IndexPage = ({ data, ...props}) => {
   ];
   const { parts, brands, services, equipment } = data.homeJson
 
-  return(
+  return (
     <Layout
       image={sources}
       imageTitle="Southwest Construction Parts Sign"
     >
       <SEO title="Southwest Constructon Parts" />
-      <Panel>
-        <H2 title={parts.title} />
-        <P content={parts.content} />
-        <List list={parts.list} />
-      </Panel>
-      <Panel theme="Blue">
-        <H2 title={brands.title} />
-        <List list={brands.list} />
-      </Panel>
-      <Panel columns>
-        <Column>
-          <H2 title={equipment.title} />
-          <P content={equipment.content} style={{ textAlign: 'left' }} />
+        <Panel>
+          <H2 title={parts.title} />
+          <P content={parts.content} />
+          <List list={parts.list} />
+        </Panel>
+        <Panel theme="Blue">
+          <H2 title={brands.title} />
+          <List list={brands.list} />
+        </Panel>
+        <Panel columns>
+          <Column>
+            <H2 title={equipment.title} />
+            <P content={equipment.content} style={{ textAlign: 'left' }} />
+            </Column>
+          <Column>
+            <H3 subTitle={equipment.subTitle} />
+            <P content={equipment.contentList} style={{ textAlign: 'left' }} />
           </Column>
-        <Column>
-          <H3 subTitle={equipment.subTitle} />
-          <P content={equipment.contentList} style={{ textAlign: 'left' }} />
-        </Column>
-      </Panel>
-      <PanelImage
-        image={data.servicesImage.childImageSharp.fluid}
-      >
-        <H2 title={services.title} />
-        <List list={services.list} />
-      </PanelImage>
+        </Panel>
+        <PanelImage
+          image={data.servicesImage.childImageSharp.fluid}
+        >
+          <H2 title={services.title} />
+          <List list={services.list} />
+        </PanelImage>
     </Layout>
   );
 };
@@ -87,6 +89,7 @@ export const query = graphql`
         fluid(
           maxWidth: 400
           quality: 80
+          duotone: { highlight: "#ff6506", shadow: "#f9f9f9" }
         ) {
           ...GatsbyImageSharpFluid
         }

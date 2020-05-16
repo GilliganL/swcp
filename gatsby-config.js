@@ -1,7 +1,7 @@
 const customBreakpointQueries = {
   sm: '(max-width: 767px)',
   md: '(max-width: 1023px)',
-  l: '(max-width: 1279px)',
+  l: '(max-width: 1440px)',
   portrait: '(orientation: portrait)',
 };
 

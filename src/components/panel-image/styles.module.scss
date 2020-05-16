@@ -10,11 +10,9 @@
   justify-content: center;
   
   @media only screen and (min-width: $desktop) {
-    height: 284px;
-    flex-wrap: wrap;
+    height: 440px;
     padding: 0;
-    // background: $dark;
-    // color: $white;
+    position: relative;
   }
 
   &__content-wrapper {
@@ -31,6 +29,17 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      position: absolute;
+      right: 175px;
+      top: 70px;
+      background: $dark;
+      color: $white;
+      z-index: 100;
+      height: 210px;
+      width: 350px;
     }
   }
 }

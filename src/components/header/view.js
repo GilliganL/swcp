@@ -8,13 +8,7 @@ const Header = ({ siteTitle }) => (
   <header className={styles.header}>
     <div className={styles.headerContent}>
       <h1 className={styles.logo}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+        <Link className={styles.logo__link} to="/">
           {siteTitle}
         </Link>
       </h1>

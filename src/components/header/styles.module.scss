@@ -26,7 +26,29 @@
       font-size: 26px;
       width: 260px;
       margin: 0;
+      padding: 7px 0;
       z-index: 10;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        background: $orange;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        transition: 500ms;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      &__link {
+        color: $white;
+      }
 
       @media only screen and (min-width: $tablet) {
         font-size: 28px;
