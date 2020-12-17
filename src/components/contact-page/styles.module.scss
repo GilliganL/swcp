@@ -1,0 +1,56 @@
+@import '../../main_style.scss';
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $desktop) {
+    width: 50%;
+    max-width: 500px;
+  }
+}
+
+.map {
+  height: 400px;
+  width: 400px;
+}
+
+.info {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+}
+
+ul {
+  width: 100%;
+  margin: 24px 0 30px 0;
+}
+
+.label {
+  font-family: $titleFont;
+  font-size: 24px;
+  flex: 1;
+}
+
+.value {
+  font-family: $textFont;
+  text-align: right;
+  font-size: 22px;
+  flex: 2;
+}
+
+.title {
+  font-family: $titleFont;
+  font-size: 28px;
+  border-bottom: 1px solid $blue;
+  text-align: center;
+}

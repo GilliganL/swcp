@@ -7,4 +7,27 @@
     width: 50%;
     max-width: 500px;
   }
+
+  @media only screen and (min-width: $desktop) {
+    &:first-of-type {
+      margin-left: 100px;
+    }
+    
+    &:last-of-type {
+      background: $blue;
+      border-radius: 5px;
+      padding: 56px;
+      z-index: 100;
+      position: absolute;
+      width: 385px;
+      right: 240px;
+      top: -28px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+  }
+
 }

@@ -8,7 +8,7 @@ const customBreakpointQueries = {
 module.exports = {
   siteMetadata: {
     title: `Southwest Construction Parts`,
-    description: `High quality construction equipment replacement parts for Barber - Greene, Blaw Knox, Broce, Case, Cat, Deere, Komatsu, Volvo, and many others. Authorized dealers for Black Cat Blades, Bucyrus Blades, ESCO, H-E Parts, ITR/Metaris, Kennametal, Pengo and other quality manufacturers.`,
+    description: `High quality construction equipment replacement parts for Barber - Greene, Blaw Knox, Broce, Case, Cat, Deere, Komatsu, Volvo, and many others. Authorized dealers for Black Cat Wear Parts, Bucyrus Blades, ESCO, H-E Parts, ITR/Metaris, Kennametal, Pengo and other quality manufacturers.`,
     author: `@SouthwestConstructionParts`,
   },
   plugins: [
@@ -67,9 +67,19 @@ module.exports = {
         ],
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "swcp-gatsby-site"
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
   ],
 }

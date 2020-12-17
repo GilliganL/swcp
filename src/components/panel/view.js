@@ -8,14 +8,15 @@ import styles from './styles.module.scss';
 const PanelView = ({
   breakpoint, children, columns, theme,
 }) => ( 
-  <section 
-    className={`
-      ${styles.panel}
-      ${theme ? styles[`panel${theme}`] : ''}
-      ${columns ? styles.panelColumns : ''}
-      `}
-    >
-    {children}
+  <section className={`${styles.panelWrapper} ${theme ? styles[`panel${theme}`] : ''}`}>
+      <div
+        className={`
+          ${styles.panel}
+          ${columns ? styles.panelColumns : ''}
+        `}
+        >
+        {children}
+      </div>
   </section>
 );
 PanelView.propTypes = {

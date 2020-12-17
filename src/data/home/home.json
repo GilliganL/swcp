@@ -5,12 +5,12 @@
   "equipment": {
     "title": "Get Parts for Your Equipment",
     "subTitle": "We have replacement parts for these brands and more:",
-    "content": "We stock parts to fit equipment from Cat scrapers to Bobcat skidsteers, pavers to trenchers and loaders to excavators.",
+    "content": "If you are like most contractors, you are looking for proven ways to trim expenses. We can help! We stock parts to fit equipment from Cat scrapers to Bobcat skidsteers, pavers to trenchers and loaders to excavators.",
     "contentList": "Bobcat, Barber - Greene, Blaw Knox, Broce, Case, Caterpillar, John Deere, Komatsu, Volvo, Doosan, Fiat, Ford-New Holland, Gallion, Gehl, Hitachi, Hyundia, JCB, Kubota, Liebherr, Linkbelt, Massey Ferguson, Takeuchi, Terex, Yanmar"
   },
   "parts": {
     "title": "Heavy Equipment Wear Parts You Can Depend On",
-    "content": "For over 20 years Southwest Construction Parts has supplied the greater Southwest with high quality heavy equipment wear parts. We work with dependable suppliers and carry a wide range of components.",
+    "content": "Southwest Construction Parts has served the Southwest for over 20 years as an independent dealer of wear parts and components for most makes of heavy equipment. We have supplied the greater Southwest with high quality heavy equipment wear parts at affordable prices. We work with dependable suppliers and carry a wide range of components.",
     "cta": "Give use a call for a quote.",
     "list": [
       "blades", "bristles", "bullet teeth", "bucket teeth", "buckets", "chains", "cutting edges", "cylinders", "differentials",
@@ -21,7 +21,7 @@
   "brands": {
     "title": "Brands You Know and Trust",
     "list": [
-      "Black Cat Blades", "Bucyrus Blades", "ESCO", "Kennametal", "Pengo"
+      "Black Cat Wear Parts", "Bucyrus Blades", "ESCO", "Kennametal", "Pengo"
     ],
     "compareTo": [
       "Adco", "Clark-Hancock", "Fabco", "Fanggs", "Geith", "H&L", "Hendrix", "Hensley"

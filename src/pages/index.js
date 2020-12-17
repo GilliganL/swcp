@@ -13,7 +13,6 @@ import useBreakpoints from '../hooks/use-breakpoints';
 
 const IndexPage = ({ data, ...props}) => {
   const [breakpoint] = useBreakpoints();
-  console.log(breakpoint)
   
   const sources = [
     data.mobileImage.childImageSharp.fluid,
@@ -33,6 +32,7 @@ const IndexPage = ({ data, ...props}) => {
         <Panel>
           <H2 title={parts.title} />
           <P content={parts.content} />
+          <P content="Call us for a quote today" />
           <List list={parts.list} />
         </Panel>
         <Panel theme="Blue">
@@ -89,7 +89,7 @@ export const query = graphql`
         fluid(
           maxWidth: 400
           quality: 80
-          duotone: { highlight: "#ff6506", shadow: "#f9f9f9" }
+          duotone: { highlight: "#f9f9f9", shadow: "#ff6506" }
         ) {
           ...GatsbyImageSharpFluid
         }

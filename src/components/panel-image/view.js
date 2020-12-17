@@ -9,30 +9,34 @@ import styles from './styles.module.scss';
 const PanelView = ({
   breakpoint, children, image,
 }) => (
-  <section className={styles.panelImage}>
-    {breakpoint !== 'desktop' && (
-      <Img
-        backgroundColor
-        fluid={image}
-        style={{
-          height: breakpoint === 'mobile' ? '200px' : '400px',
-          width: '100%',
-        }}
-      />
-    )}
-    <div className={styles.panelImage__contentWrapper}>
-      {children}
+  <section className={styles.panelImageWrapper}>
+    <div className={styles.panelImage}>
+      {breakpoint !== 'desktop' && (
+        <Img
+          backgroundColor
+          fluid={image}
+          style={{
+            height: breakpoint === 'mobile' ? '200px' : '400px',
+            width: '100%',
+          }}
+        />
+      )}
+      <div className={styles.panelImage__contentWrapper}>
+        {children}
+      </div>
+      {breakpoint === 'desktop' && (
+        <Img
+          backgroundColor
+          fluid={image}
+          style={{
+            position: 'absolute',
+            left: 0,
+            height: '100%',
+            width: '75%',
+          }}
+        />
+      )}
     </div>
-    {breakpoint === 'desktop' && (
-      <Img
-        backgroundColor
-        fluid={image}
-        style={{
-          height: '100%',
-          width: '100%',
-        }}
-      />
-    )}
   </section>
 );
 PanelView.propTypes = {

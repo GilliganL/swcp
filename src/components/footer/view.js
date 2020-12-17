@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import RightArrow from '../../assets/rightArrow.svg';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
@@ -8,8 +8,8 @@ const FooterView = () => (
     <div className={styles.footerContent}>
       © {new Date().getFullYear()}
       <p className={styles.footerText}>
-        Give us a call
-        <img className={styles.footerText__arrow} src="/assets/rightArrow.svg" />
+        Call us to order
+        <RightArrow className={styles.footerText__arrow} />
       </p>
   </div>
 </footer>
