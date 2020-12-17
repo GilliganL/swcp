@@ -49,22 +49,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          {
-            family: `Roboto Condensed`,
-            variants: [`300`, `400`, `700`]
-          },
-          {
-            family: `Roboto`,
-            variants: [`300`, `400`, `700`]
-          },
-          {
-            family: `Roboto Slab`,
-            variants: [`300`, `400`, `700`]
-          },
+          `Roboto Condensed\:300,400,700`,
+          `Roboto\:300,400,700`,
+          `Roboto Slab\:300,400,700`
         ],
+        display: 'swap',
       },
     },
     {
