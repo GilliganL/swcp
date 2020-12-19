@@ -4,14 +4,17 @@
   width: 100%;
   box-sizing: border-box;
   
+  &:last-of-type {
+    background: $blue;
+    color: $dark;
+  }
+  
   @media only screen and (min-width: $tablet) {
     width: 50%;
   }
 
   @media only screen and (min-width: $desktop) {    
     &:last-of-type {
-      background: $blue;
-      color: $dark;
       padding: 56px;
 
       p {

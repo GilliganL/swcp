@@ -52,8 +52,8 @@ const IndexPage = ({ data, ...props}) => {
         </Panel>
         <Panel columns>
           <Column>
-            <H2 style={{ textAlign: 'left' }}>{equipment.title}</H2>
-            <P style={{ textAlign: 'left' }}>{equipment.content}</P>
+            <H2 style={{ textAlign: 'center' }}>{equipment.title}</H2>
+            <P style={{ textAlign: 'center', margin: '0 auto' }}>{equipment.content}</P>
           </Column>
           <Column>
             <H3>{equipment.subTitle}</H3>
@@ -72,7 +72,6 @@ const IndexPage = ({ data, ...props}) => {
 
 export default IndexPage
 
-// duotone: { highlight: "#ffffff", shadow: "#66339" }
 export const query = graphql`
   query {
     mobileImage: file(relativePath: { eq: "home-cover-sign.jpg" }) {
@@ -88,7 +87,7 @@ export const query = graphql`
     desktopImage: file(relativePath: { eq: "home-cover-sign-16x9.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 720
+          maxWidth: 1400
           quality: 80
         ) {
           ...GatsbyImageSharpFluid

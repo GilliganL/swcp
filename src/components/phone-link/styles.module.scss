@@ -1,6 +1,7 @@
 @import '../../main_style.scss';
 
 .phone {
+  box-sizing: border-box;
   text-decoration: none;
   font-size: 28px;
   background: $orange;

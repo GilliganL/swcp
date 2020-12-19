@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
       <Header siteTitle={site.siteMetadata.title} />
       <main>
         {children}
-        <PhoneCTA />
       </main>
+      <PhoneCTA />
       <Footer />
     </>
   )
