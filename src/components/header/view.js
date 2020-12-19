@@ -7,14 +7,14 @@ import styles from './styles.module.scss';
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
     <div className={styles.headerContent}>
-      <h1 className={styles.logo}>
+      <div className={styles.logo}>
         <Link
           className={styles.logoLink}
           to="/"
         >
-          {siteTitle}
+          Southwest Construction Parts
         </Link>
-      </h1>
+      </div>
       <Nav />
     </div>
   </header>

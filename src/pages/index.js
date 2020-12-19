@@ -3,17 +3,17 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Panel from '../components/panel';
-import H2 from '../components/heading2';
-import H3 from '../components/heading3';
+import HeaderImage from '../components/header-image';
+import H1 from '../components/heading/h1';
+import H2 from '../components/heading/h2';
+import H3 from '../components/heading/h3';
 import P from '../components/paragraph';
 import List from '../components/list';
 import Column from '../components/panel-column';
+import PhoneLink from '../components/phone-link';
 import PanelImage from '../components/panel-image';
-import useBreakpoints from '../hooks/use-breakpoints';
 
 const IndexPage = ({ data, ...props}) => {
-  const [breakpoint] = useBreakpoints();
-  
   const sources = [
     data.mobileImage.childImageSharp.fluid,
     {
@@ -24,35 +24,46 @@ const IndexPage = ({ data, ...props}) => {
   const { parts, brands, services, equipment } = data.homeJson
 
   return (
-    <Layout
-      image={sources}
-      imageTitle="Southwest Construction Parts Sign"
-    >
+    <Layout>
       <SEO title="Southwest Constructon Parts" />
-        <Panel>
-          <H2 title={parts.title} />
-          <P content={parts.content} />
-          <P content="Call us for a quote today" />
-          <List list={parts.list} />
+        <H1 style={{ textAlign: 'left'}}>{parts.title}</H1>
+          <HeaderImage
+            image={sources}
+            imageTitle="Southwest Construction Parts Sign"
+          />
+        <Panel columns>
+          <div style={{ height: '500px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <H3 style={{ textAlign: 'left' }}>Some Heading Here?</H3>
+            <P style={{ textAlign: 'left' }}>{parts.content}</P>
+            <PhoneLink />
+          </div>
+          <div style={{ height: '500px', width: '50%', background: '#fff' }} />
         </Panel>
-        <Panel theme="Blue">
-          <H2 title={brands.title} />
+        <Panel columns>
+          <div style={{ height: '500px', width: '50%', background: '#fff' }} />
+          <div style={{ height: '500px', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <H2>Some Heading Here</H2>
+            <List list={parts.list} />
+          </div>
+        </Panel>
+        <Panel>
+          <H2>{brands.title}</H2>
           <List list={brands.list} />
         </Panel>
         <Panel columns>
           <Column>
-            <H2 title={equipment.title} />
-            <P content={equipment.content} style={{ textAlign: 'left' }} />
-            </Column>
+            <H2 style={{ textAlign: 'left' }}>{equipment.title}</H2>
+            <P style={{ textAlign: 'left' }}>{equipment.content}</P>
+          </Column>
           <Column>
-            <H3 subTitle={equipment.subTitle} />
-            <P content={equipment.contentList} style={{ textAlign: 'left' }} />
+            <H3>{equipment.subTitle}</H3>
+            <P style={{ textAlign: 'left' }}>{equipment.contentList}</P>
           </Column>
         </Panel>
         <PanelImage
           image={data.servicesImage.childImageSharp.fluid}
         >
-          <H2 title={services.title} />
+          <H2>{services.title}</H2>
           <List list={services.list} />
         </PanelImage>
     </Layout>
@@ -77,7 +88,7 @@ export const query = graphql`
     desktopImage: file(relativePath: { eq: "home-cover-sign-16x9.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1440
+          maxWidth: 720
           quality: 80
         ) {
           ...GatsbyImageSharpFluid
@@ -89,7 +100,7 @@ export const query = graphql`
         fluid(
           maxWidth: 400
           quality: 80
-          duotone: { highlight: "#f9f9f9", shadow: "#ff6506" }
+          duotone: { highlight: "#f9f9f9", shadow: "#e06329" }
         ) {
           ...GatsbyImageSharpFluid
         }

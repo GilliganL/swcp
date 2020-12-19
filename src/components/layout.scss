@@ -12,6 +12,10 @@ body {
 }
 main {
   width: 100%;
+  max-width: 1400px;
+  box-sizing: content-box;
+  padding: 0 60px;
+  margin: 0 auto;
   min-height: calc(100vh - 60px);
 
   @media only screen and (min-width: $desktop) {
@@ -211,7 +215,8 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: $dark;
+  color: $white;
+  background: $dark;
   font-family: $textFont;
   font-weight: normal;
   word-wrap: break-word;

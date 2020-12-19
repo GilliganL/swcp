@@ -3,43 +3,33 @@
 .panel {
   font-family: $textFont;
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 42px 14px;
+  padding: 42px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: $dark;
+  color: $white;
 
   @media only screen and (min-width: $tablet) {
-    padding: 42px 28px;
+    padding: 42px 0;
   }
 
   &-wrapper {
     width: 100%;
   }
 
-  &-blue {
-    background: $dark;
-    color: $white;
-  }
-
-  &-red {
-    background: $red;
-    color: $white;
-  }
-
   &-columns {
     
     @media only screen and (min-width: $tablet) {
       flex-wrap: wrap;
-      max-height: 450px;
       padding-bottom: 0;
     }
 
     @media only screen and (min-width: $desktop) {
       position: relative;
       flex-direction: row;
-      max-height: 450px;
+      justify-content: space-between;
       padding-bottom: 42px;
     }
   }

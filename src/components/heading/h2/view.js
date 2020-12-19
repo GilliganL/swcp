@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const View = ({ children, style }) => (
-  <p className={styles.paragraph} style={style}>
+  <h2 className={styles.heading2} style={style}>
     {children}
-  </p>
+  </h2>
 );
 View.propTypes = {
   children: PropTypes.string.isRequired,

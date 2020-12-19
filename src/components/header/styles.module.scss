@@ -3,22 +3,24 @@
 .header {
   background: $dark;
   color: $white;
-  height: 75px;
+  height: 80px;
+  padding: 20px 10px;
+  margin: 0 auto;
+  max-width: 1400px;
+  box-sizing: content-box;
+
+  @media only screen and (min-width: $desktop) {
+    padding: 40px 60px; 
+  }
 
   &-content {
     height: 100%;
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding-right: 7px;
-    padding-left: 14px;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @media only screen and (min-width: $tablet) {
-      padding: 0 14px;
-    }
 
     .logo {
       font-family: $title2Font;
@@ -34,29 +36,19 @@
 
       &-link {
         color: $white;
-
-        @media only screen and (min-width: $desktop) {
-          padding: 7px 0;
-          position: relative;
-
-          &::after {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            background: $orange;
-            bottom: 0;
-            left: 0;
-            height: 2px;
-            width: 0;
-            transition: 500ms;
-            border-radius: 5px;
-          }
-        }
       }
 
       @media only screen and (min-width: $tablet) {
         font-size: 28px;
-        width: 360px;
+        line-height: 28px;
+        width: 60%;
+        letter-spacing: 1px;
+      }
+
+      @media only screen and (min-width: $desktop) {
+        font-size: 32px;
+        line-height: 32px;
+        width: 50%;
       }
     }
   }

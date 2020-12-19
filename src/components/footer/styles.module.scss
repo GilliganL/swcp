@@ -8,11 +8,12 @@
   height: 80px;
 
   &-content {
+    box-sizing: content-box;
     height: 100%;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 14px;
+    padding: 0 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,15 +23,19 @@
     display: flex;
     align-items: center;
     margin: 0;
-    margin-right: 64px;
-    font-size: 22px;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 24px;
     color: $white;
 
     &__arrow {
       height: 21px;
       width: 21px;
-      margin-left: 14px;
+      margin-left: 10px;
+      pointer-events: none;
+
+      path {
+        fill: $white;
+      }
     }
   }
 }

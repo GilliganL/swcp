@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-const View = ({ title }) => (
-  <h2 className={styles.heading2}>{title}</h2>
+const View = () => (
+  <a className={styles.phone} href="tel:505-220-4076">
+    Call for a quote today
+  </a>
 );
-View.propTypes = {
-  title: PropTypes.string.isRequired,
-};
+View.propTypes = {};
 View.defaultProps = {};
 
 export default View;

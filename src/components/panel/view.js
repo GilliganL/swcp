@@ -6,9 +6,9 @@ import styles from './styles.module.scss';
 // themes: Blue
 
 const PanelView = ({
-  breakpoint, children, columns, theme,
+  breakpoint, children, columns,
 }) => ( 
-  <section className={`${styles.panelWrapper} ${theme ? styles[`panel${theme}`] : ''}`}>
+  <section className={`${styles.panelWrapper}`}>
       <div
         className={`
           ${styles.panel}
@@ -22,12 +22,10 @@ const PanelView = ({
 PanelView.propTypes = {
   columns: PropTypes.bool,
   contentList: PropTypes.string,
-  theme: PropTypes.string,
 };
 PanelView.defaultProps = {
   columns: null,
   contentList: null,
-  theme: null,
 };
 
 export default PanelView;

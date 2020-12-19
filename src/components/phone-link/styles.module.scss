@@ -1,0 +1,16 @@
+@import '../../main_style.scss';
+
+.phone {
+  text-decoration: none;
+  font-size: 28px;
+  background: $orange;
+  color: $dark;
+  color: $white;
+  padding: 20px;
+  width: 307px;
+
+  &:hover { 
+    color: $orange;
+    background: $white;
+  }
+}
