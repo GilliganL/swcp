@@ -1,0 +1,31 @@
+@import '../../main_style.scss';
+
+.contentBox {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+
+  @media only screen and (min-width: $tablet) {
+    padding: 40px 20px;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    padding: 40px 0;
+  }
+
+  &-50 {
+    @extend .contentBox;
+
+    @media only screen and (min-width: $tablet) {
+      width: 50%;
+    }
+  }
+
+  &-100 {
+    @extend .contentBox;
+  }
+}

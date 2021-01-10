@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const View = () => (
@@ -7,7 +6,5 @@ const View = () => (
     Call for a quote today
   </a>
 );
-View.propTypes = {};
-View.defaultProps = {};
 
 export default View;

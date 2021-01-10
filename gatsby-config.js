@@ -7,66 +7,74 @@ const customBreakpointQueries = {
 
 module.exports = {
   siteMetadata: {
-    title: `Southwest Construction Parts`,
-    description: `High quality construction equipment replacement parts for Barber - Greene, Blaw Knox, Broce, Case, Cat, Deere, Komatsu, Volvo, and many others. Authorized dealers for Black Cat Wear Parts, Bucyrus Blades, ESCO, H-E Parts, ITR/Metaris, Kennametal, Pengo and other quality manufacturers.`,
-    author: `@SouthwestConstructionParts`,
+    title: 'Southwest Construction Parts',
+    description: 'High quality construction equipment replacement parts for Barber - Greene, Blaw Knox, Broce, Case, Cat, Deere, Komatsu, Volvo, and many others. Authorized dealers for Black Cat Wear Parts, Bucyrus Blades, ESCO, H-E Parts, ITR/Metaris, Kennametal, Pengo and other quality manufacturers.',
+    author: '@SouthwestConstructionParts',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `static/assets/favicon-16x16.png`, // This path is relative to the root of the site.
+        name: 'gatsby-starter-default',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'static/assets/favicon-16x16.png', // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
-    `gatsby-transformer-json`,
+    'gatsby-plugin-sass',
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-plugin-breakpoints`,
+      resolve: 'gatsby-plugin-breakpoints',
       options: {
         queries: customBreakpointQueries,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `./src/data/`
+        path: './src/data/'
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/'
       },
     },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          `Roboto Condensed\:300,400,700`,
-          `Roboto\:300,400,700`,
-          `Roboto Slab\:300,400,700`
+          'Roboto Condensed\:300,400,700',
+          'Roboto\:300,400,700',
+          'Roboto Slab\:300,400,700'
         ],
         display: 'swap',
       },
     },
     {
-      resolve: `gatsby-plugin-s3`,
+      resolve: 'gatsby-plugin-s3',
       options: {
         bucketName: "swcp-gatsby-site"
       },
     },
     {
-      resolve: `gatsby-plugin-react-svg`,
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /svg/,

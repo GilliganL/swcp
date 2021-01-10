@@ -1,31 +1,18 @@
-import { Link } from "gatsby"
 import React from 'react';
 import PropTypes from 'prop-types';
-import Nav from '../nav';
 import styles from './styles.module.scss';
 
-const Header = ({ siteTitle }) => (
+const View = ({ children }) => (
   <header className={styles.header}>
-    <div className={styles.headerContent}>
-      <div className={styles.logo}>
-        <Link
-          className={styles.logoLink}
-          to="/"
-        >
-          Southwest Construction Parts
-        </Link>
-      </div>
-      <Nav />
-    </div>
+    {children}
   </header>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+View.propTypes = {
+  children: PropTypes.oneOf([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
 };
+View.defaultProps = {};
 
-Header.defaultProps = {
-  siteTitle: ``,
-};
-
-export default Header;
+export default View;

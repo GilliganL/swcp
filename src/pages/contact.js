@@ -5,13 +5,13 @@ import SEO from '../components/seo';
 import Contact from '../components/contact-page';
 
 const ContactPage = ({ data }) => {
-  const sources = [
-    data.mobileImage.childImageSharp.fluid,
-    {
-      ...data.desktopImage.childImageSharp.fluid,
-      media: `(min-width: 768px)`,
-    },
-  ];
+  // const sources = [
+  //   data.mobileImage.childImageSharp.fluid,
+  //   {
+  //     ...data.desktopImage.childImageSharp.fluid,
+  //     media: `(min-width: 768px)`,
+  //   },
+  // ];
 
   return (
     <Layout

@@ -2,16 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-const View = ({ children, style }) => (
-  <h2 className={styles.heading2} style={style}>
+const View = ({ children, h3Class, style }) => (
+  <h3
+    className={`${styles.heading3} ${h3Class}}`}
+    style={style}
+  >
     {children}
-  </h2>
+  </h3>
 );
 View.propTypes = {
   children: PropTypes.string.isRequired,
+  h3Class: PropTypes.string,
   style: PropTypes.object,
 };
 View.defaultProps = {
+  h3Class: '',
   style: null,
 };
 

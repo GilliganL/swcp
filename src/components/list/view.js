@@ -6,7 +6,7 @@ import _ from 'lodash';
 const View = ({ length, list, maxHeight }) => (
   <ul
     className={`${styles.list} ${length < 6 && styles.list__sm}`}
-    style={length >= 6 ? { maxHeight } : {}}
+    style={{ ...(maxHeight && length >= 6) && { maxHeight }}}
   >
     {list.map((item) => (
       <li
@@ -18,7 +18,13 @@ const View = ({ length, list, maxHeight }) => (
     ))}
   </ul>
 );
-View.propTypes = {};
-View.defaultProps = {};
+View.propTypes = {
+  length: PropTypes.number.isRequired,
+  list: PropTypes.array.isRequired,
+  maxHeight: PropTypes.string,
+};
+View.defaultProps = {
+  maxHeight: null,
+};
 
 export default View;

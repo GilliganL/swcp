@@ -1,55 +1,5 @@
 @import '../../main_style.scss';
 
 .header {
-  background: $dark;
-  color: $white;
-  height: 80px;
-  padding: 20px 10px;
-  margin: 0 auto;
-  max-width: 1400px;
-  box-sizing: content-box;
-
-  @media only screen and (min-width: $desktop) {
-    padding: 40px 60px; 
-  }
-
-  &-content {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .logo {
-      font-family: $title2Font;
-      font-weight: 400;
-      font-size: 26px;
-      width: 245px;
-      margin: 0;
-      z-index: 10;
-
-      &:hover .logo-link::after {
-        width: 100%;
-      }
-
-      &-link {
-        color: $white;
-      }
-
-      @media only screen and (min-width: $tablet) {
-        font-size: 28px;
-        line-height: 28px;
-        width: 60%;
-        letter-spacing: 1px;
-      }
-
-      @media only screen and (min-width: $desktop) {
-        font-size: 32px;
-        line-height: 32px;
-        width: 50%;
-      }
-    }
-  }
+  margin-bottom: 40px;
 }

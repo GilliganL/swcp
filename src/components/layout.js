@@ -8,33 +8,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Footer from './footer';
-import Header from './header';
+import NavBar from './nav-bar';
 import PhoneCTA from './phone-cta';
-import { useStaticQuery, graphql } from "gatsby"
 import "./layout.scss"
 
-const Layout = ({ children }) => {
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  return (
-    <>
-      <Header siteTitle={site.siteMetadata.title} />
-      <main>
-        {children}
-      </main>
-      <PhoneCTA />
-      <Footer />
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+    <NavBar />
+    <main>
+      {children}
+    </main>
+    <PhoneCTA />
+    <Footer />
+  </>
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

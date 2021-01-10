@@ -3,25 +3,19 @@
 .column {
   width: 100%;
   box-sizing: border-box;
-  
-  &:last-of-type {
-    background: $blue;
-    color: $dark;
-  }
+  background-color: none;
+
   
   @media only screen and (min-width: $tablet) {
     width: 50%;
   }
 
   @media only screen and (min-width: $desktop) {    
-    &:last-of-type {
       padding: 56px;
 
       p {
         margin: 0;
       }
-    }
-
   }
 
 }

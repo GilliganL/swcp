@@ -14,6 +14,10 @@
     bottom: 20px;
     z-index: 100;
 
+    @media only screen and (min-width: $desktop) {
+      right: 10px;
+    }
+
     @media only screen and (min-width: $maxWidth) {
       right: calc((100vw - 1400px)/2 - 50px);
     }

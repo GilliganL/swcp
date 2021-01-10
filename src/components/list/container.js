@@ -6,7 +6,7 @@ import View from './view';
 const Container = ({ list }) => {
   const [breakpoint] = useBreakpoints();
   const maxHeight = {
-    mobile: `${list.length * 14}px`
+    mobile: `${list.length * 14}px`,
   }
 
   return (
@@ -18,7 +18,8 @@ const Container = ({ list }) => {
     />
   )
 };
-Container.propTypes = {};
-Container.defaultProps = {};
+Container.propTypes = {
+  list: PropTypes.array.isRequired,
+};
 
 export default Container;

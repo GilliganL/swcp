@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from  'prop-types';
 import useBreakpoints from '../../hooks/use-breakpoints';
 import NavView from './view';
 import MobileNavView from './view-mobile';
