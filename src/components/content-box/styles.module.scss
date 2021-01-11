@@ -3,11 +3,10 @@
 .contentBox {
   width: 100%;
   margin: 0 auto;
-  padding: 40px 10px;
+  padding: 30px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
 
   @media only screen and (min-width: $tablet) {
     padding: 40px 20px;

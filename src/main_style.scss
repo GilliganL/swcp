@@ -16,3 +16,14 @@ $maxWidth: 1440px;
 $titleFont: 'Roboto Condensed', sans-serif;
 $title2Font: 'Roboto Slab', serif;
 $textFont: 'Roboto', sans-serif;
+
+.hero-placeholder {
+  height: 300px;
+
+  @media only screen and (min-width: $tablet) {
+    height: 400px;
+  }
+  @media only screen and (min-width: $desktop) {
+    height: 520px;
+  }
+}

@@ -2,28 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-const PanelView50 = ({ children }) => (
+const ContentBox50 = ({ children }) => (
   <section className={`${styles.contentBox50}`}>
     {children}
   </section>
 );
-PanelView50.propTypes = {
-  children: PropTypes.oneOf([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
+ContentBox50.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
   ]).isRequired,
 };
 
-const PanelView100 = ({ children }) => (
+const ContentBox100 = ({ children }) => (
   <section className={`${styles.contentBox100}`}>
     {children}
   </section>
 );
-PanelView100.propTypes = {
-  children: PropTypes.oneOf([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element),
+ContentBox100.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
   ]).isRequired,
 };
 
-export { PanelView50, PanelView100 };
+export { ContentBox50, ContentBox100 };

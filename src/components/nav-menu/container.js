@@ -9,7 +9,7 @@ const NavContainer = () => {
 
   return (
     <>
-      {breakpoint !== 'desktop' && <MobileNavView open={open} setOpen={setOpen} breakpoint={breakpoint} /> }
+      {(breakpoint === 'mobile' || breakpoint === 'tablet') && <MobileNavView open={open} setOpen={setOpen} breakpoint={breakpoint} /> }
       {breakpoint === 'desktop' && <NavView /> }
     </>
   );

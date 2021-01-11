@@ -9,6 +9,10 @@
   max-width: 1400px;
   box-sizing: content-box;
 
+  @media only screen and (min-width: $tablet) {
+    padding: 20px;
+  }
+
   @media only screen and (min-width: $desktop) {
     padding: 40px 60px;
   }

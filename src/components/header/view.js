@@ -8,9 +8,9 @@ const View = ({ children }) => (
   </header>
 );
 View.propTypes = {
-  children: PropTypes.oneOf([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
   ]).isRequired,
 };
 View.defaultProps = {};

@@ -9,9 +9,14 @@
   color: $white;
   padding: 20px;
   width: 307px;
+  margin: 0 auto;
 
-  &:hover { 
+  &:hover {
     color: $orange;
     background: $white;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    margin: 0;
   }
 }
