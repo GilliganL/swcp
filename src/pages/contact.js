@@ -3,52 +3,30 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Contact from '../components/contact-page';
+import { H1 } from '../components/heading';
 
 const ContactPage = ({ data }) => {
-  // const sources = [
-  //   data.mobileImage.childImageSharp.fluid,
-  //   {
-  //     ...data.desktopImage.childImageSharp.fluid,
-  //     media: `(min-width: 768px)`,
-  //   },
-  // ];
-
+  const { address, email, fax, phone } = data.contactJson;
   return (
-    <Layout
-      // image={sources}
-      // imageTitle="Southwest Construction Parts Sign"
-    >
+    <Layout>
       <SEO title="Contact | Southwest Constructon Parts" />
-      <Contact />
+      <H1>
+        Contact us for quotes, special orders and general questions
+      </H1>
+      <Contact
+        address={address}
+        email={email}
+        fax={fax}
+        phone={phone}
+      />
     </Layout>
   );
 };
 
 export default ContactPage;
 
-// duotone: { highlight: "#ffffff", shadow: "#66339" }
 export const query = graphql`
   query {
-    mobileImage: file(relativePath: { eq: "home-cover-sign.jpg" }) {
-      childImageSharp {
-        fluid(
-          maxWidth: 800
-          quality: 80
-        ) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    desktopImage: file(relativePath: { eq: "home-cover-sign-16x9.jpg" }) {
-      childImageSharp {
-        fluid(
-          maxWidth: 1440
-          quality: 80
-        ) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     contactJson {
       path
       phone

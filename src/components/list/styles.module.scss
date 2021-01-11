@@ -30,12 +30,15 @@
     line-height: 21px;
     font-weight: 700;
     text-align: left;
+    width: 50%;
 
     @media only screen and (min-width: $tablet) {
       text-align: center;
+      width: initial;
     }
 
     &__sm {
+      width: initial;
       font-weight: 400;
       font-size: 22px;
       margin: 7px;
