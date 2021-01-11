@@ -26,6 +26,9 @@ const IndexPage = ({ data, ...props}) => {
       <SEO title="Southwest Constructon Parts" />
       <Header>
         <H1>{parts.title}</H1>
+        <H2 style={{ textAlign: 'left' }}>
+          Serving New Mexico and Surrounding Communities
+        </H2>
         <Image
           alt="Warehouse shelves with heavy equipment parts"
           image={sources[breakpoint]}
@@ -35,12 +38,18 @@ const IndexPage = ({ data, ...props}) => {
       <ContentBox50>
         <H3 style={{ textAlign: 'left' }}>Who We Are</H3>
         <P style={{ textAlign: 'left' }}>{parts.content}</P>
-        <PhoneLink />
+        <PhoneLink>
+          Call for a quote today
+        </PhoneLink>
       </ContentBox50>
       <div style={{ height: breakpoint === 'desktop' ? '500px' : '400px', width: breakpoint === 'desktop' ? '50%' : '100%', background: '#fff', margin: '0 auto' }} />
       <ContentBox100>
-        <H2>Parts We Carry</H2>
+        {/* This is just a small sample of the construction parts we offer. */}
+        <H2>Some of the Parts We Carry</H2>
         <UL list={parts.list} />
+        <PhoneLink style={{ margin: '40px auto 0 auto' }}>
+          Please contact us to inquire about specific equipment needs.
+        </PhoneLink>
       </ContentBox100>
       <ContentBox50>
         <H2>{equipment.title}</H2>

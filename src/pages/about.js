@@ -1,23 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import About from '../components/about-page';
 import SEO from '../components/seo';
 
 const AboutPage = ({ data }) => {
-  const sources = [
-    data.mobileImage.childImageSharp.fluid,
-    {
-      ...data.desktopImage.childImageSharp.fluid,
-      media: `(min-width: 768px)`,
-    },
-  ];
 
   return (
-    <Layout
-      image={sources}
-      imageTitle="Southwest Construction Parts Sign"
-    >
+    <Layout>
       <SEO title="About | Southwest Constructon Parts" />
+      <About />
     </Layout>
   );
 };

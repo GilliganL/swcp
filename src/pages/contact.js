@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Contact from '../components/contact-page';
-import { H1 } from '../components/heading';
+import { H1, H2 } from '../components/heading';
 
 const ContactPage = ({ data }) => {
   const { address, email, fax, phone } = data.contactJson;
@@ -13,6 +13,9 @@ const ContactPage = ({ data }) => {
       <H1>
         Contact us for quotes, special orders and general questions
       </H1>
+      <H2>
+        Serving New Mexico and Surrounding Communities
+      </H2>
       <Contact
         address={address}
         email={email}

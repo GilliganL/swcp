@@ -1,0 +1,33 @@
+@import '../../main_style.scss';
+
+.wrapper {
+  width: 100%;
+}
+
+.paragraph {
+  text-align: left;
+  max-width: $maxWidth;
+  padding: 0 60px 0 10px;
+
+  &:first-of-type {
+    padding: 0 10px;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    padding: 0 60px 0 20px;
+  }
+  @media only screen and (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+.subtitle {
+  padding: 0 10px;
+
+  @media only screen and (min-width: $tablet) {
+    padding: 0 20px;
+  }
+  @media only screen and (min-width: $desktop) {
+    padding: 0;
+  }
+}
