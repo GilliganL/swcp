@@ -46,3 +46,11 @@
     }
   }
 }
+
+.value {
+  display: none;
+
+  @media only screen and (min-width: $tablet) {
+    display: inline-block;
+  }
+}
