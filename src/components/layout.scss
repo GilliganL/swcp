@@ -28,7 +28,6 @@ summary {
 header {
   width: 100vw;
   max-width: $maxWidth;
-  min-height: 400px;
 
   @media only screen and (min-width: $desktop) {
     width: calc(100vw - 120px);

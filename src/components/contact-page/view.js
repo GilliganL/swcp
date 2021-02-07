@@ -1,11 +1,17 @@
 import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { H2 } from '../heading';
 import styles from './styles.module.scss';
 
 const ContactPage = ({
-  address, email, fax, phone,
+  address, email, image, fax, phone,
 }) => (
   <div className={styles.wrapper}>
+    <GatsbyImage
+      alt="alt"
+      className={styles.image}
+      image={image}
+    />
     <div className={styles.info}>
       <div className={styles.column}>
         <ul class={styles.listWrapper}>

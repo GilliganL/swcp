@@ -5,7 +5,7 @@ import P from '../paragraph';
 import styles from './styles.module.scss';
 
 const View = () => (
-  <div className={styles.wrapper}>
+  <main className={styles.wrapper}>
     <H1>
       About Us
     </H1>
@@ -24,7 +24,7 @@ const View = () => (
     <H2 h2Class={styles.subtitle}>
       Serving New Mexico and Surrounding Communities
     </H2>
-  </div>
+  </main>
 );
 View.propTypes = {};
 View.defaultProps = {};
