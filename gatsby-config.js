@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'swcp',
+        short_name: 'swcp',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
@@ -65,12 +65,6 @@ module.exports = {
           'Roboto Slab\:300,400,700'
         ],
         display: 'swap',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-s3',
-      options: {
-        bucketName: "swcp-gatsby-site"
       },
     },
     {

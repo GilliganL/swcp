@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
-import _ from 'lodash';
+import { startCase } from 'lodash';
 
 const View = ({ list }) => (
   <ul
@@ -15,7 +15,7 @@ const View = ({ list }) => (
         className={`${styles.listItem} ${list.length < 6 ? styles.listItem__sm : ''}`}
         key={item}
       >
-        {_.startCase(item)}
+        {startCase(item)}
       </li>
     ))}
   </ul>
