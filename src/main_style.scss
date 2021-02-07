@@ -1,29 +1,12 @@
-// $dark: #191e32;
-// $orange: #ff6505;
 $red: #BF5D4C;
-// $blue: #81848f;
-// $white: #f1f0e7;
-
 $dark: #101727;
 $orange: #FF611D;
 $white: #FFF;
 $blue: #CCCFD3;
 
-
 $tablet: 768px;
 $desktop: 1280px;
-$maxWidth: 1440px;
+$maxWidth: 1400px;
 $titleFont: 'Roboto Condensed', sans-serif;
 $title2Font: 'Roboto Slab', serif;
 $textFont: 'Roboto', sans-serif;
-
-.hero-placeholder {
-  height: 300px;
-
-  @media only screen and (min-width: $tablet) {
-    height: 400px;
-  }
-  @media only screen and (min-width: $desktop) {
-    height: 520px;
-  }
-}

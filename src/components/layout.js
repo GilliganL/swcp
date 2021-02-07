@@ -15,9 +15,7 @@ import "./layout.scss"
 const Layout = ({ children }) => (
   <>
     <NavBar />
-    <main>
-      {children}
-    </main>
+    {children}
     <PhoneCTA />
     <Footer />
   </>

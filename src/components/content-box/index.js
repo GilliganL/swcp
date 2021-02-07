@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const ContentBox50 = ({ children }) => (
-  <section className={`${styles.contentBox50}`}>
+  <section className={styles.contentBox50}>
     {children}
   </section>
 );
@@ -15,7 +15,7 @@ ContentBox50.propTypes = {
 };
 
 const ContentBox100 = ({ children }) => (
-  <section className={`${styles.contentBox100}`}>
+  <section className={styles.contentBox100}>
     {children}
   </section>
 );

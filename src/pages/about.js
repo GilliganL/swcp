@@ -22,7 +22,6 @@ export const query = graphql`
     mobileImage: file(relativePath: { eq: "home-cover-sign.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 800
           quality: 80
         ) {
           ...GatsbyImageSharpFluid
@@ -32,7 +31,6 @@ export const query = graphql`
     desktopImage: file(relativePath: { eq: "home-cover-sign-16x9.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1440
           quality: 80
         ) {
           ...GatsbyImageSharpFluid

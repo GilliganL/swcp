@@ -48,9 +48,14 @@
     padding: 7px;
     display: flex;
     align-items: center;
+    display: none;
 
     &:hover {
       color: $orange;
+    }
+
+    @media only screen and (min-width: $tablet) {
+      display: flex;
     }
   }
 
@@ -78,6 +83,10 @@
       &:last-child {
         transform-origin: 0 100%;
       }
+    }
+
+    @media only screen and (min-width: $desktop) {
+      display: none;
     }
 
   }

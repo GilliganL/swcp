@@ -6,12 +6,11 @@ import MobileNavView from './view-mobile';
 const NavContainer = () => {
   const [breakpoint] = useBreakpoints();
   const [open, setOpen] = useState(false);
-
+console.log(breakpoint)
   return (
-    <>
-      {(breakpoint === 'mobile' || breakpoint === 'tablet') && <MobileNavView open={open} setOpen={setOpen} breakpoint={breakpoint} /> }
-      {breakpoint === 'desktop' && <NavView /> }
-    </>
+    breakpoint === 'desktop'
+      ? <NavView />
+      : <MobileNavView open={open} setOpen={setOpen} breakpoint={breakpoint} />
   );
 };
 

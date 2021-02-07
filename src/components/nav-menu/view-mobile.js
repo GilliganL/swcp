@@ -5,11 +5,9 @@ import styles from './styles.module.scss';
 
 const MobileNavView = ({ breakpoint, open, setOpen  }) => (
   <nav className={`${styles.nav} ${open ? styles.navActive : ''}`}>
-    {breakpoint === 'tablet' && (
-      <a className={styles.navPhone} href="tel:505-220-4076">
-        (505) 220-4076
-      </a>
-    )}
+    <a className={styles.navPhone} href="tel:505-220-4076">
+      (505) 220-4076
+    </a>
     <button
       className={styles.burgerButton}
       onClick={() => setOpen(!open)}
@@ -29,7 +27,7 @@ const MobileNavView = ({ breakpoint, open, setOpen  }) => (
         </li>
       </ul>
     </div>
-    <div className={styles.overlay} />
+    <div className={styles.overlay} onClick={() => setOpen(false)} />
   </nav>
 );
 MobileNavView.propTypes = {

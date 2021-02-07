@@ -25,22 +25,27 @@ section,
 summary {
   display: block;
 }
+header {
+  width: 100vw;
+  max-width: $maxWidth;
+  min-height: 400px;
+
+  @media only screen and (min-width: $desktop) {
+    width: calc(100vw - 120px);
+    padding: 0 60px;
+    margin: 0 auto;
+  }
+}
 main {
   width: 100vw;
   max-width: $maxWidth;
   min-height: calc(100vh - 60px);
 
-  @media only screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   @media only screen and (min-width: $desktop) {
+    width: calc(100vw - 120px);
     min-height: calc(100vh - 155px);
     padding: 0 60px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 audio,
