@@ -6,7 +6,6 @@ import MobileNavView from './view-mobile';
 const NavContainer = () => {
   const [breakpoint] = useBreakpoints();
   const [open, setOpen] = useState(false);
-console.log(breakpoint)
   return (
     breakpoint === 'desktop'
       ? <NavView />
